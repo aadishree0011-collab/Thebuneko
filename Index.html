@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buneko | Handmade Crochet</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff8f5;
+  color: #4b3434;
+}
+
+header {
+  background: #f8dfe4;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7b4b55;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4b3434;
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff0f2;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #7b4b55;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.button {
+  display: inline-block;
+  background: #9b6570;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  padding: 55px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #7b4b55;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.product {
+  background: white;
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 18px rgba(100, 50, 50, 0.08);
+}
+
+.product img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #f5e5e5;
+}
+
+.product h3 {
+  margin: 15px 0 8px;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.about {
+  text-align: center;
+  line-height: 1.8;
+}
+
+.contact {
+  text-align: center;
+  background: #f8dfe4;
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #7b4b55;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    margin-left: 8px;
+    font-size: 13px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Buneko 🧶</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Welcome to Buneko 🌷</h1>
+  <p>Handmade crochet pieces, made with love 🤍</p>
+  <a href="#shop" class="button">Shop Now</a>
+</section>
+
+<section id="shop">
+  <h2 class="section-title">Our Crochet Collection 🧶</h2>
+
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=600&q=80" alt="Crochet flower">
+      <h3>Crochet Flower</h3>
+      <p class="price">NPR 150</p>
+      <button class="button" onclick="order('Crochet Flower')">Order Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=600&q=80" alt="Crochet bag">
+      <h3>Crochet Bag</h3>
+      <p class="price">NPR 1,200</p>
+      <button class="button" onclick="order('Crochet Bag')">Order Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Crochet accessory">
+      <h3>Crochet Accessory</h3>
+      <p class="price">NPR 350</p>
+      <button class="button" onclick="order('Crochet Accessory')">Order Now</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=80" alt="Custom crochet">
+      <h3>Custom Crochet</h3>
+      <p class="price">Starting NPR 500</p>
+      <button class="button" onclick="order('Custom Crochet')">Order Now</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Buneko 🤍</h2>
+
+  <div class="about">
+    <p>
+      Buneko is a small handmade crochet business creating cute,
+      thoughtful and customized pieces for you and your loved ones.
+    </p>
+    <br>
+    <p>
+      Every piece is handmade with care and attention to detail.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2 class="section-title">Want to Order? 🌷</h2>
+
+    <p>Send us a message on Instagram to place your order.</p>
+
+    <br>
+
+    <a
+      class="button"
+      href="https://instagram.com/thebuneko"
+      target="_blank">
+      Message @thebuneko
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Buneko 🧶 | Handmade with love
+</footer>
+
+<script>
+function order(product) {
+  const message = "Hi Buneko! 🤍 I want to order: " + product;
+  const instagram = "https://instagram.com/thebuneko";
+
+  alert(
+    message +
+    "\n\nPlease message us on Instagram: @thebuneko"
+  );
+
+  window.open(instagram, "_blank");
+}
+</script>
+
+</body>
+</html>
